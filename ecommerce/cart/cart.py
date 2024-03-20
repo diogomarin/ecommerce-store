@@ -60,6 +60,11 @@ class Cart():
 
             item["price"] = Decimal(item["price"])
 
-            item["total"] = item["price"] = item["qty"]
+            item["total"] = item["price"] * item["qty"]
 
             yield item
+
+    
+    def get_total(self):
+
+        return sum(Decimal(item["price"]) * item["qty"] for item in self.cart.values())
