@@ -112,13 +112,14 @@
 
                 product_id: $("#add-button").val(),
                 product_quantity: $("#select option:selected").text(),
-                csrmiddlewaretoken: "{{ csrf_token }}",
+                csrfmiddlewaretoken: "{{ csrf_token }}",
                 action: "post"
 
             },
 
-            sucess: function(json){
+            success: function(json){
 
+                console.log(json)
 
             },
 
