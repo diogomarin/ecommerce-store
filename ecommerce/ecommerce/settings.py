@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-t(!s7#^pb%#ea*%o689a!)^q#@-7g(n)m)(1qf(9l^$ucbl($c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ "*" ]
 
 
 # Application definition
@@ -38,9 +38,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-    "store", # Django app
+    "store", # django app
 
-    "cart", # Django app
+    "cart", # django app
 
     "mathfilters", # biblioteca
 ]
@@ -68,7 +68,8 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                "store.views.categories", # Updated
+
+                "store.views.categories",
                 "cart.context_processors.cart", 
 
             ],
